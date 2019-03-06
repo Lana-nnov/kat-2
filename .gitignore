@@ -8,5 +8,6 @@
 build/
 css/*.css
 node_modules/
+img-ai/
 npm-debug.*
 Thumbs.db

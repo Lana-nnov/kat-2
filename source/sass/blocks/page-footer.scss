@@ -1,0 +1,42 @@
+.page-footer {
+  display: none;
+}
+@media (min-width: $tablet-width) {
+  .page-footer {
+    @include container;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: 1px solid red;
+  }
+  .page-footer__logo {
+    width: 150px;
+  }
+  .page-footer__social {
+    width: 180px;
+    outline: 1px solid green;
+  }
+  .copywrite__text {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .page-footer__copyright {
+    width: 130px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .copywrite__text {
+    font-size: 18px;
+  }
+  page-footer__social {
+    width: 200px;
+  }
+  .page-footer__copyright {
+    width: 150px;
+  }
+}
