@@ -1,0 +1,135 @@
+.photo {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  width: 280px;
+  margin-bottom: 20px;
+  outline: 1px solid red;
+}
+.photo__wrapper {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  outline: 1px solid red;
+}
+.photo__panorama-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #d22856;
+  color: #ffffff;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.photo--main {
+  width: 100%;
+  background-color: #ffffff;
+  outline: 1px solid blue;
+}
+.photo__img {
+  display: block;
+}
+.photo__img--main {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-100vw / 2 + 280px / 2);
+  margin-right: calc(-100vw / 2 + 280px / 2);
+  height: 170px;
+  background-size: cover;
+  outline: 1px solid green;
+}
+.photo__item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+  font-size: 14px;
+}
+.photo__item--main {
+  width: 250px;
+  background-color: #f2f2f2;
+  margin: 0 auto; 
+}
+.photo__author-name {
+  font-weight: bold;
+  font-style: normal;
+}
+.photo__time {
+  text-transform: uppercase;
+}
+.photo__likes {
+  margin: 0;
+  padding: 0;
+  color: #d22856;
+  text-transform: uppercase;
+  order: 2;
+}
+.photo__text {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  order: 1;
+}
+@media (min-width: $tablet-width) {   
+  .photo {
+    width: 300px;
+  }  
+  .photo--main {
+    width: 100%;
+  }  
+  .photo__wrapper {
+    width: 620px;
+  }
+  .photo__panorama-text {
+    top: 50px;
+  }
+  .photo__img--main {
+    height: 500px;
+    margin-left: calc(-100vw / 2 + 620px / 2);
+    margin-right: calc(-100vw / 2 + 620px / 2);
+  }
+  .photo__item--main {
+    width: 560px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .photo__likes {
+    margin-top: auto;
+  }    
+  .photo__item--main {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .photo__info--main {
+    width: 150px;
+  }
+  .photo__likes--main {
+    order: 0;    
+    width: 150px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .photo {
+    margin-bottom: 50px;
+  }
+  .photo__wrapper {
+    width: 940px;
+  }
+  .photo__item--main {
+    width: 880px;
+  }
+  .photo__img--main {    
+    margin-left: calc(-100vw / 2 + 940px / 2);
+    margin-right: calc(-100vw / 2 + 940px / 2);
+  }
+}
