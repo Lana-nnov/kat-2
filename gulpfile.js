@@ -5,7 +5,20 @@ var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var imagemin = require("gulp-imagemin");
+var svgstore = require("gulp-svgstore");
 var server = require("browser-sync").create();
+
+gulp.task("images", function() {
+  gulp.src("source/img/**/*.{png, jpg, svg}", {cwd: process.cwd()})
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+    ]))
+    .on('error', console.log)
+    .pipe(gulp.dest("source/img", {cwd: process.cwd()}))    
+});
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
